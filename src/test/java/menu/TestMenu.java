@@ -1,13 +1,14 @@
 package menu;
 
-import org.testng.annotations.Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestMenu {
-    @Test
-    void test()
+    @org.junit.jupiter.api.Test
+    public void test()
     {
         assertEquals("Hi", new Menu().getHello());
+        assertEquals("Hello World", new Menu().getHello());
     }
 
 }
