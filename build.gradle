@@ -10,8 +10,28 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.testng:testng:7.1.0'
+    implementation 'junit:junit:5.7.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+            include '**/*.yml'
+        }
+    }
+
+    test {
+        java {
+            srcDirs = ['src/test/java/']
+        }
+    }
 }
 
 test {
