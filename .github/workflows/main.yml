@@ -3,7 +3,7 @@ on:
   push:
     branches: [ main, menu-dev ]
   pull_request:
-    branches: [ main, menu-dev ]
+    branches: [ main]
 
 jobs:
   build:
