@@ -1,7 +1,7 @@
 name: build
 on:
   push:
-    branches: [ main, menu-dev ]
+    branches: [ main, menu-dev, parser-dev ]
   pull_request:
     branches: [ main]
 
