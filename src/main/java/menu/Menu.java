@@ -93,7 +93,8 @@ public class Menu {
                     "1 - in a specific year(y)\n" +
                     "2 - in a specific month(m)\n" +
                     "3 - in a specific day(d)\n";
-    private String FilterClusterIDText = "";
+    private String FilterClusterIDText =
+            "";
 
     public String getWelcomeString() {
         return this.welcomeString;
