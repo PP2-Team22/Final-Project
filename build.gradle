@@ -3,13 +3,11 @@ plugins {
   id 'application'
 }
 
-application
-{
+application {
   mainClassName = "Main"
 }
 
-run
-{
+run {
   standardInput = System.in
 }
 
