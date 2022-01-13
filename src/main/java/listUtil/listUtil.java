@@ -37,10 +37,11 @@ public class listUtil {
            String val = dict.get(num);
            fields.add(val);
        }
-       String res = "[ ";
+       String res = "";
        int sig = 0;
        for(Crash crash: crashes)
        {
+          res += "[ ";
           for(String f: fields)
           {
               Class cl = crash.getClass();

@@ -8,6 +8,7 @@ import java.util.Scanner;
 import crash.Crash;
 import menu.Menu;
 import listUtil.listUtil;
+import sortUtil.sortUtil;
 import parser.Parser;
 
 import java.lang.reflect.Method;
@@ -73,6 +74,33 @@ public class Main {
             }
             else if(x == 2) {
                 Menu.printOptionsText(Menu.getSortOptionText());
+                int c = sc.nextInt();
+                Menu.printOptionsText(Menu.getSortOrderOptionText());
+                String order = sc.next();
+                TreeMap<Integer, String> dict = new TreeMap<Integer, String>();
+                int cnt = 1;
+                for(Field f: cs)
+                {
+                    if(cnt <= 1)
+                    {
+                        dict.put(cnt, f.getName());
+                    }
+                    else if(cnt == 2)
+                    {
+
+                    }
+                    else
+                    {
+                        dict.put(cnt - 1, f.getName());
+                    }
+                    cnt++;
+                }
+                String op = dict.get(c);
+                sortUtil util = new sortUtil();
+                Class sortu = util.getClass();
+                Method sortby = sortUtil.class.getDeclaredMethod("sortby" + op, List.class, String.class);
+                sortby.invoke(util, crashes, order);
+                System.out.println("Database was successfully sorted !");
             }
             else if(x == 3) {
                 Menu.printOptionsText(Menu.getSearchOptionText());

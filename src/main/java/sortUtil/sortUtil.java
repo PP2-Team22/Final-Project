@@ -2,99 +2,205 @@ package sortUtil;
 
 import crash.Crash;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Collections;
 import java.util.Comparator;
 
 public class sortUtil {
-    public Comparator<Crash>comparing_date = Comparator.comparing(Crash::getDate);
-    public Comparator<Crash>comparing_location = Comparator.comparing(Crash::getLocation);
-    public Comparator<Crash>comparing_operator = Comparator.comparing(Crash::getOperator);
-    public Comparator<Crash>comparing_flight = Comparator.comparing(Crash::getFlight);
-    public Comparator<Crash>comparing_route = Comparator.comparing(Crash::getRoute);
-    public Comparator<Crash>comparing_type  = Comparator.comparing(Crash::getType);
-    public Comparator<Crash>comparing_registration  = Comparator.comparing(Crash::getRegistration);
-    public Comparator<Crash>comparing_cn_ln  = Comparator.comparing(Crash::getCn_ln);
-    public Comparator<Crash>comparing_aboard  = Comparator.comparing(Crash::getAboard);
-    public Comparator<Crash>comparing_fatalities = Comparator.comparing(Crash::getFatalities);
-    public Comparator<Crash>comparing_ground = Comparator.comparing(Crash::getGround);
-    public Comparator<Crash>comparing_survivors = Comparator.comparing(Crash::getSurvivors);
-    public Comparator<Crash>comparing_survivalRate = Comparator.comparing(Crash::getSurvivalRate);
-    public Comparator<Crash>comparing_summary = Comparator.comparing(Crash::getSummary);
-    public Comparator<Crash>comparing_clustId = Comparator.comparing(Crash::getClustId);
+    public static Comparator<Crash>comparing_date = Comparator.comparing(Crash::getDate);
+    public static Comparator<Crash>comparing_location = Comparator.comparing(Crash::getLocation);
+    public static Comparator<Crash>comparing_operator = Comparator.comparing(Crash::getOperator);
+    public static Comparator<Crash>comparing_flight = Comparator.comparing(Crash::getFlight);
+    public static Comparator<Crash>comparing_route = Comparator.comparing(Crash::getRoute);
+    public static Comparator<Crash>comparing_type  = Comparator.comparing(Crash::getType);
+    public static Comparator<Crash>comparing_registration  = Comparator.comparing(Crash::getRegistration);
+    public static Comparator<Crash>comparing_cn_ln  = Comparator.comparing(Crash::getCn_ln);
+    public static Comparator<Crash>comparing_aboard  = Comparator.comparing(Crash::getAboard);
+    public static Comparator<Crash>comparing_fatalities = Comparator.comparing(Crash::getFatalities);
+    public static Comparator<Crash>comparing_ground = Comparator.comparing(Crash::getGround);
+    public static Comparator<Crash>comparing_survivors = Comparator.comparing(Crash::getSurvivors);
+    public static Comparator<Crash>comparing_survivalRate = Comparator.comparing(Crash::getSurvivalRate);
+    public static Comparator<Crash>comparing_summary = Comparator.comparing(Crash::getSummary);
+    public static Comparator<Crash>comparing_clustId = Comparator.comparing(Crash::getClustId);
 
-    public void sortbyDate(ArrayList<Crash>crashes)
+    public static void sortbyDate(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_date);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_date);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_date.reversed());
+        }
     }
 
-    public void sortbyLocation(ArrayList<Crash>crashes)
+    public static void sortbyLocation(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_location);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_location);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_location.reversed());
+        }
     }
 
-    public void sortbyOperator(ArrayList<Crash>crashes)
+    public static void sortbyOperator(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_operator);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_operator);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_operator.reversed());
+        }
     }
 
-    public void sortbyFlight(ArrayList<Crash>crashes)
+    public void sortbyFlight(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_flight);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_flight);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_flight.reversed());
+        }
     }
 
-    public void sortbyRoute(ArrayList<Crash>crashes)
+    public void sortbyRoute(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_route);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_route);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_route.reversed());
+        }
     }
 
-    public void sortbyType(ArrayList<Crash>crashes)
+    public void sortbyType(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_type);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_type);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_type.reversed());
+        }
     }
 
-    public void sortbyRegistration(ArrayList<Crash>crashes)
+    public void sortbyRegistration(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_registration);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_registration);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_registration.reversed());
+        }
     }
 
-    public void sortbyCnln(ArrayList<Crash>crashes)
+
+    public void sortbyCn_ln(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_cn_ln);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_cn_ln);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_cn_ln.reversed());
+        }
     }
 
-    public void sortbyAboard(ArrayList<Crash>crashes)
+    public void sortbyAboard(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_aboard);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_aboard);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_aboard.reversed());
+        }
     }
 
-    public void sortbyFatalities(ArrayList<Crash>crashes)
+    public void sortbyFatalities(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_fatalities);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_fatalities);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_fatalities.reversed());
+        }
     }
 
-    public void sortbyGround(ArrayList<Crash>crashes)
+    public void sortbyGround(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_ground);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_ground);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_ground.reversed());
+        }
     }
 
-    public void sortbySurvivors(ArrayList<Crash>crashes)
+    public void sortbySurvivors(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_survivors);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_survivors);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_survivors.reversed());
+        }
     }
 
-    public void sortbySurvivalRate(ArrayList<Crash>crashes)
+    public void sortbySurvivalRate(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_survivalRate);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_survivalRate);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_survivalRate.reversed());
+        }
     }
 
-    public void sortbySummary(ArrayList<Crash>crashes)
+    public void sortbySummary(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_summary);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_summary);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_summary.reversed());
+        }
     }
 
-    public void sortbyClustid(ArrayList<Crash>crashes)
+    public void sortbyClustId(List<Crash>crashes, String order)
     {
-        Collections.sort(crashes, comparing_clustId);
+        if(order.equals("ASC"))
+        {
+            Collections.sort(crashes, comparing_clustId);
+        }
+        else
+        {
+            Collections.sort(crashes, comparing_clustId.reversed());
+        }
     }
 }
