@@ -5,25 +5,25 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Crash {
-    private Date date;
+    private Date Date;
     private boolean isTime;
-    private String location;
-    private String operator;
-    private String flight;
-    private String route;
-    private String type;
-    private String registration;
-    private String cn_ln;
-    private int aboardCnt;
-    private int fatalitiesCnt;
-    private int groundCnt;
-    private int survivorsCnt;
-    private double survivalRate;
-    private String summary;
-    private boolean clustId;
+    private String Location;
+    private String Operator;
+    private String Flight;
+    private String Route;
+    private String Type;
+    private String Registration;
+    private String Cn_ln;
+    private int Aboard;
+    private int Fatalities;
+    private int Ground;
+    private int Survivors;
+    private double SurvivalRate;
+    private String Summary;
+    private boolean ClustId;
 
     public Date getDate() {
-        return date;
+        return Date;
     }
 
     public boolean getIsTime() {
@@ -31,93 +31,93 @@ public class Crash {
     }
 
     public String getLocation() {
-        return location;
+        return Location;
     }
 
     public String getOperator() {
-        return operator;
+        return Operator;
     }
 
     public String getFlight() {
-        return flight;
+        return Flight;
     }
 
     public String getRoute() {
-        return route;
+        return Route;
     }
 
     public String getType() {
-        return type;
+        return Type;
     }
 
     public String getRegistration() {
-        return registration;
+        return Registration;
     }
 
     public String getCn_ln() {
-        return cn_ln;
+        return Cn_ln;
     }
 
-    public int getAboardCnt() {
-        return aboardCnt;
+    public int getAboard() {
+        return Aboard;
     }
 
-    public int getFatalitiesCnt() {
-        return fatalitiesCnt;
+    public int getFatalities() {
+        return Fatalities;
     }
 
-    public int getGroundCnt() {
-        return groundCnt;
+    public int getGround() {
+        return Ground;
     }
 
-    public int getSurvivorsCnt() {
-        return survivorsCnt;
+    public int getSurvivors() {
+        return Survivors;
     }
 
     public double getSurvivalRate() {
-        return survivalRate;
+        return SurvivalRate;
     }
 
     public String getSummary() {
-        return summary;
+        return Summary;
     }
 
     public boolean getClustId() {
-        return clustId;
+        return ClustId;
     }
 
-    public Crash(Date date, boolean isTime, String location, String operator,
-                 String flight, String route, String type, String registration, String cn_ln,
-                 int aboardCnt, int fatalitiesCnt, int groundCnt, int survivorsCnt,
-                 double survivalRate, String summary, boolean clustId)
+    public Crash(Date Date, boolean isTime, String Location, String Operator,
+                 String Flight, String Route, String Type, String Registration, String Cn_ln,
+                 int Aboard, int Fatalities, int Ground, int Survivors,
+                 double SurvivalRate, String Summary, boolean ClustId)
     {
-        this.date = date;
+        this.Date = Date;
         this.isTime = isTime;
-        this.location = location;
-        this.operator = operator;
-        this.flight = flight;
-        this.route = route;
-        this.type = type;
-        this.registration = registration;
-        this.cn_ln = cn_ln;
-        this.aboardCnt = aboardCnt;
-        this.fatalitiesCnt = fatalitiesCnt;
-        this.groundCnt = groundCnt;
-        this.survivorsCnt = survivorsCnt;
-        this.survivalRate = survivalRate;
-        this.summary = summary;
-        this.clustId = clustId;
+        this.Location = Location;
+        this.Operator = Operator;
+        this.Flight = Flight;
+        this.Route = Route;
+        this.Type = Type;
+        this.Registration = Registration;
+        this.Cn_ln = Cn_ln;
+        this.Aboard = Aboard;
+        this.Fatalities = Fatalities;
+        this.Ground = Ground;
+        this.Survivors = Survivors;
+        this.SurvivalRate = SurvivalRate;
+        this.Summary = Summary;
+        this.ClustId = ClustId;
     }
 
     public String toString()
     {
-        String clust = (clustId == true ? "High Fatality": "Low Fatality");
+        String clust = (ClustId == true ? "High Fatality": "Low Fatality");
         SimpleDateFormat st = (isTime == true ? new SimpleDateFormat("MM/dd/yyyy mm:ss"): new SimpleDateFormat("MM/dd/yyyy "));
-        String d = st.format(date);
-        return "[Date:" + d + ", Location: " + location + ", Operator: " + operator + ", Flight: " + flight +
-                ", Route: " + route + ", Type: " + type + ", Registration: " + registration + ", Cn.ln: " + cn_ln +
-                ", Aboard: " + aboardCnt + ", Fatalities: " + fatalitiesCnt + ", Ground: " + groundCnt + ", Survivors: " +
-                survivorsCnt + ", Survival Rate: " + survivalRate + "\nSummary: " + summary + ", ClustId: " + clust + "]";
+        String d = st.format(Date);
+        return "[Date:" + d + ", Location: " + Location + ", Operator: " + Operator + ", Flight: " + Flight +
+                ", Route: " + Route + ", Type: " + Type + ", Registration: " + Registration + ", Cn.ln: " + Cn_ln +
+                ", Aboard: " + Aboard + ", Fatalities: " + Fatalities + ", Ground: " + Ground + ", Survivors: " +
+                Survivors + ", Survival Rate: " + SurvivalRate + "\nSummary: " + Summary + ", ClustId: " + clust + "]";
     }
     public void printCrash()
     {
