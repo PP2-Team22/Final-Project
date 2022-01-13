@@ -18,27 +18,29 @@ public class Menu {
     private static String listOptionsText =
                     "a - List all the fields of each entity\n" +
                     "b - List only the selected fields of each entity\n" +
-                    "c - List entities based on the range of rows";
+                    "c - List entities based on the range of rows\n" +
+                    "[------ Please type the character for choosing the option --------]";
 
-    private static String listOnlySelectedText = "For which field you want to list?" +
-            "1 - Date\n" +
-            "2 - Time\n" +
-            "3 - Location\n" +
-            "4 - Operator\n" +
-            "5 - Flight\n" +
-            "6 - Route\n" +
-            "7 - Type\n" +
-            "8 - Registration\n" +
-            "9 - cn.In\n\n" +
-            "10 - Aboard\n" +
-            "11 - Fatalities\n" +
-            "12 - Ground\n" +
-            "13 - Survivors\n" +
-            "14 - SurvivalRate\n" +
-            "15 - Summary\n" +
-            "16 - ClustID";
+    private static String listOnlySelectedText = "Which fields you want to list for each entity?" +
+            "1 - Date and Time\n" +
+            "2 - Location\n" +
+            "3 - Operator\n" +
+            "4 - Flight\n" +
+            "5 - Route\n" +
+            "6 - Type\n" +
+            "7 - Registration\n" +
+            "8 - cn.In\n\n" +
+            "9 - Aboard\n" +
+            "10 - Fatalities\n" +
+            "11 - Ground\n" +
+            "12 - Survivors\n" +
+            "13 - SurvivalRate\n" +
+            "14 - Summary\n" +
+            "15 - ClustID" +
+            "[------ Please type the numbers for choosing the option, Example: 1 2 3 8 is for choosing by Date\n --------]";
 
-    private static String listOnRangeOptionText = "Based on which range of rows do you want to list entities?";
+    private static String listOnRangeOptionText = "Based on which range of rows do you want to list entities?\n" +
+            "[--------Please type two numbers, the boundaries of the range. For example print crashes in the range [l,r].-------]\n";
     private static String sortOptionText = "Based on which field you want to sort the entities?\n" +
             "1 - Date\n" +
             "2 - Time\n" +
