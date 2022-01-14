@@ -8,4 +8,4 @@ java -jar Main.jar
 Passenger Plane Crashes database Client App can help to use the database of Airplane Crashes. 
 User can print all records, sort it, and search, filter the needed records.
 
-<img src="https://github.com/PP2-Team22/Final-Project/blob/main/screenshot.png" alt="drawing" style="width:200px;"/>
+<img src="https://github.com/PP2-Team22/Final-Project/blob/main/screenshot.png" alt="drawing" style="width:600px;"/>
