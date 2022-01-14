@@ -1,6 +1,5 @@
 package crash;
 
-import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -114,10 +113,23 @@ public class Crash {
         String clust = (ClustId == true ? "High Fatality": "Low Fatality");
         SimpleDateFormat st = (isTime == true ? new SimpleDateFormat("MM/dd/yyyy mm:ss"): new SimpleDateFormat("MM/dd/yyyy "));
         String d = st.format(Date);
-        return "[Date:" + d + ", Location: " + Location + ", Operator: " + Operator + ", Flight: " + Flight +
-                ", Route: " + Route + ", Type: " + Type + ", Registration: " + Registration + ", Cn.ln: " + Cn_ln +
+        return "[Date:" + d + ", Location: " + (Location == "" ? "null" : Location) + ", Operator: " + (Operator == "" ? "null" : Type) +
+                ", Flight: " + Flight +
+                ", Route: " + (Route == "" ? "null" : Route) + ", Type: " + (Type == "" ? "null" : Type) +
+                ", Registration: " + (Registration == "" ? "null" : Registration)
+                + ", Cn.ln: " + (Cn_ln == "" ? "null" : Cn_ln) +
                 ", Aboard: " + Aboard + ", Fatalities: " + Fatalities + ", Ground: " + Ground + ", Survivors: " +
-                Survivors + ", Survival Rate: " + SurvivalRate + "\nSummary: " + Summary + ", ClustId: " + clust + "]";
+                Survivors + ", Survival Rate: " + SurvivalRate + "\nSummary: " + (Summary == "" ? "null" : Summary) + ", ClustId: " + clust + "]";
+    }
+    public String toString1()
+    {
+        String clust = (ClustId == true ? "High Fatality": "Low Fatality");
+        SimpleDateFormat st = (isTime == true ? new SimpleDateFormat("MM/dd/yyyy mm:ss"): new SimpleDateFormat("MM/dd/yyyy "));
+        String d = st.format(Date);
+        return d + ", " + Location + ", " + Operator + ", " + Flight +
+                ", " + Route + ", " + Type + ", " + Registration + ", " + Cn_ln +
+                ", " + Aboard + ", " + Fatalities + ", " + Ground + ", " +
+                Survivors + ", " + SurvivalRate + ", " + Summary + ", " + clust;
     }
     public void printCrash()
     {

@@ -21,7 +21,7 @@ public class Menu {
                     "c - List entities based on the range of rows\n" +
                     "[------ Please type the character for choosing the option --------]";
 
-    private static String listOnlySelectedText = "Which fields you want to list for each entity?" +
+    private static String listOnlySelectedText = "Which fields you want to list for each entity?\n" +
             "1 - Date and Time\n" +
             "2 - Location\n" +
             "3 - Operator\n" +
@@ -36,8 +36,8 @@ public class Menu {
             "12 - Survivors\n" +
             "13 - SurvivalRate\n" +
             "14 - Summary\n" +
-            "15 - ClustID" +
-            "[------ Please type the numbers for choosing the option, Example: 1 2 3 8 is for choosing by Date\n --------]";
+            "15 - ClustID\n" +
+            "[------ Please type the numbers for choosing the options, Example: 1 2 3 8 is for choosing by Date, Location, Operator, cn.Ln--------]\n";
 
     private static String listOnRangeOptionText = "Based on which range of rows do you want to list entities?\n" +
             "[--------Please type two numbers, the boundaries of the range. For example print crashes in the range [l,r].-------]\n";
@@ -56,48 +56,48 @@ public class Menu {
             "12 - Survivors\n" +
             "13 - SurvivalRate\n" +
             "14 - Summary\n" +
-            "15 - ClustID";
+            "15 - ClustID\n" +
+            "[------ Please type the numbers for choosing the options, Example: 1 2 3 8 is for choosing by Date, Location, Operator, cn.Ln--------]\n";
 
     private static String sortOrderOptionText = "In which order you want to sort? Type ASC for ascending order or Type DESC for descending order.\n";
     private static String searchOptionText = "Based on which field you want to search entity(ise)?\n" +
             "1 - Date\n" +
-            "2 - Time\n" +
-            "3 - Location\n" +
-            "4 - Operator\n" +
-            "5 - Flight\n" +
-            "6 - Route\n" +
-            "7 - Type\n" +
-            "8 - Registration\n" +
-            "9 - cn.Ln\n" +
-            "10 - Aboard\n" +
-            "11 - Fatalities\n" +
-            "12 - Ground\n" +
-            "13 - Survivors\n" +
-            "14 - SurvivalRate\n" +
-            "15 - Summary\n" +
-            "16 - ClustID";
+            "2 - Location\n" +
+            "3 - Operator\n" +
+            "4 - Flight\n" +
+            "5 - Route\n" +
+            "6 - Type\n" +
+            "7 - Registration\n" +
+            "8 - cn.Ln\n" +
+            "9 - Aboard\n" +
+            "10 - Fatalities\n" +
+            "11 - Ground\n" +
+            "12 - Survivors\n" +
+            "13 - SurvivalRate\n" +
+            "14 - Summary\n" +
+            "15 - ClustID\n" +
+            "[------ Please type the numbers for choosing the option, Example: 1 2 3 8 is for choosing by Date, Location, Operator, cn.Ln--------]\n";
 
-    private static String filterOptionText = "Based on which field or set of fields " +
-                                "and according to which rules you want to filter?";
+    private static String filterOptionText = "Based on how many fields are you going to filter? Type the number.";
     private static String filterStringOptionText =
+                    "How do you want to filter?\n" +
                     "1 - start with\n" +
                     "2 - ends with\n" +
                     "3 - contains\n" +
                     "4 - null";
-    private static String filterDateTimeNumbersText =
+    private static String filterNumbersText =
                     "1 - equal(eq)\n" +
                     "2 - greater than(gt)\n" +
                     "3 - less than(lt)\n" +
                     "4 - greater and equal to(ge)\n" +
                     "5 - less and equal to(le)\n" +
-                    "6 - between(bt)\n" +
-                    "7 - null";
+                    "6 - null";
     private static String filterDateAndTimeText =
                     "1 - in a specific year(y)\n" +
                     "2 - in a specific month(m)\n" +
                     "3 - in a specific day(d)";
     private static String filterClusterIDText =
-            "Is there high possibility of fatality ? Type yes or no.";
+            "Is there high fatality ? Type yes or no.";
 
     public static String getWelcomeString() {
         return welcomeString;
@@ -119,11 +119,15 @@ public class Menu {
 
     public static String getSearchOptionText(){return searchOptionText;}
 
+    public static String getFilterStringOptionText(){return filterStringOptionText;}
+
     public static String getFilterOptionText(){return filterOptionText;}
 
-    public static String getFilterDateTimeNumbersText(){return filterDateTimeNumbersText;}
+    public static String getFilterDateTimeNumbersText(){return filterNumbersText;}
 
     public static String getFilterDateAndTimeText(){return filterDateAndTimeText;}
+
+    public static String getFilterClusterIDText(){return filterClusterIDText;}
 
     public static void printWelcomeString(){
         System.out.println(getWelcomeString());

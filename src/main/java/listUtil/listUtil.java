@@ -12,8 +12,8 @@ import java.util.TreeMap;
 import parser.Parser;
 
 public class listUtil {
-    private static String columns = "Date\nTime\nLocation\nOperator\nFlight\nRoute\nType\nRegistration\nCn.Ln\nAboard\nFatalities\nGround\n" +
-            "Survivors\nSurvivalRate\nSummary\nClustID\n";
+    private static String columns = "Date, Time, Location, Operator, Flight, Route ,Type, Registration, Cn.Ln, Aboard, Fatalities, Ground," +
+            "Survivors, SurvivalRate, Summary, ClustID\n";
 
     public static String getColumns()
     {
@@ -27,6 +27,15 @@ public class listUtil {
             res += crashes.get(i) + "\n";
         }
         res += "[------The number of printed crashes is " + crashes.size() + ". ------]";
+        return res;
+    }
+    public static String ListAllFieldsExport(List<Crash>crashes)
+    {
+        String res = "";
+        for(int i = 0; i < crashes.size(); i++)
+        {
+            res += crashes.get(i).toString1() + "\n";
+        }
         return res;
     }
     public static String ListSelectedFields(List<Crash>crashes, String numbers[], TreeMap<Integer, String> dict) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
@@ -52,7 +61,8 @@ public class listUtil {
                  {
                      Method getter = Crash.class.getDeclaredMethod("get" + f);
                      getter.setAccessible(true);
-                     res += f + ": " + getter.invoke(crash);
+                     if(getter.invoke(crash) == "")res += f + ": " + "null";
+                     else res += f + ": " + getter.invoke(crash);
                      res += ", ";
                  }
               }
