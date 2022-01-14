@@ -11,6 +11,24 @@ run {
   standardInput = System.in
 }
 
+configurations{
+    compile
+}
+
+jar {
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    manifest {
+        attributes(
+                'Implementation-Title': 'Crash Database',
+                "Main-Class": "Main"
+        )
+    }
+    destinationDirectory = file("$rootDir/my-jar")
+    archivesBaseName = 'app'
+}
+
 group 'org.example'
 version '1.0-SNAPSHOT'
 
